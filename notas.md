@@ -20,5 +20,5 @@ dd if=test.txt of=diskette bs=512 seek=1 count=1 conv=notrunc
 ```
 ## Rodando o QEMU
 ```bash
-qemu-system-i386 -cpu pentium -m 32 -drive file=diskette,if=floppy,media=disk,format=raw,index=0
+qemu-system-i386 -cpu pentium -m 32 drive file=diskette,if=floppy,media=disk,format=raw,index=0
 ```

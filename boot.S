@@ -17,16 +17,20 @@ mov AL, 1               ; AL        - Count sector to read
 
 int 0x13                ; INT 13H Diskette
 
-mov AH, 0x13            ; AH = 13H  - write string
-mov BP, BUFFER          ; BP        - addrees message
-mov CX, 33            ; CX        - character-only count
-mov DH, 0x0A            ; DH        - Line possition
-mov DL, 0x0             ; DL        - Column possition
-mov BH, 0               ; BH        - page number
-mov AL, 0x01            ; AL        - attribute mode
-mov BL, 0x0f            ; Bl        - attribute (AL=0 or AL=1)
+jmp BUFFER
 
-int 0x10                ; INT 10H   - Video
+;===== Print String ======= 
+;mov AH, 0x13            ; AH = 13H  - write string
+;mov BP, BUFFER          ; BP        - addrees message
+;mov CX, 50              ; CX        - character-only count
+;mov DH, 0x0A            ; DH        - Line possition
+;mov DL, 0x0             ; DL        - Column possition
+;mov BH, 0               ; BH        - page number
+;mov AL, 0x01            ; AL        - attribute mode
+;mov BL, 0x0f            ; Bl        - attribute (AL=0 or AL=1)
+
+;int 0x10                ; INT 10H   - Video
+;=============================
 
 driverNumber: DB 0;
 

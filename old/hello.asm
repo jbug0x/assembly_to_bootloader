@@ -1,7 +1,4 @@
-ORG 0x7C00
-
-mov [0x1000], 35
-mov AX, [0x1000]
+ORG 0x1000
 
 mov AH, 0x13    ; AH = 13H  - write string
 mov BP, message ; BP        - addrees message
@@ -14,8 +11,3 @@ mov BL, 0x0f    ; Bl        - attribute (AL=0 or AL=1)
 int 0x10        ; INT 10H   - Video
 
 message: DB "Hello World"
-
-TIMES 510 - ($ - $$) DB 0x0
-
-DB 0x55
-DB 0xAA
