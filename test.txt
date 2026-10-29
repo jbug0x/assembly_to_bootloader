@@ -1,1 +1,1 @@
-Sou um arquivo que será carregado no bootloader. Não faço nada
+SOU APENAS UM ARQUIVO DE TEXTO
