@@ -7,6 +7,11 @@ mov [driverNumber], DL
 mov word [0x1000], 35
 mov AX, [0x1000]
 
+
+; STACK
+mov SP, 0x7000          ; SP        - marca o inicio da pilha
+mov BP, SP              ; BP        - marca a base da pilha
+
 mov AH, 0x02            ; AH = 02H  - read desired sectors into memory
 mov DL, [driverNumber]  ; DL        - number drive disc to read
 mov DH, 0               ; DH        - head
